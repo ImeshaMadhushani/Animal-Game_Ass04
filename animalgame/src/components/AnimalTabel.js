@@ -34,9 +34,9 @@ function AnimalTable(props) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Result</td>
-                        <td>Animal Name</td>
-                        <td>Select the Animal</td>
+                        <td width='10%'>Result</td>
+                        <td width='20%'>Animal Name</td>
+                        <td width='70%'>Select the Animal</td>
                     </tr>
                     <tr>
                         <td className='result'>{result}</td>
