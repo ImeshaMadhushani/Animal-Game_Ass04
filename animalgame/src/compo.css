@@ -1,0 +1,30 @@
+.container{
+    text-align: center;
+    margin: 20px;
+}
+
+.gameTable{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 0;
+    border: solid 1px red;
+    
+}
+
+.gameTable th,td{
+    border: 1px solid #ff9900;
+    padding: 10px;
+    text-align: center;
+    vertical-align: top;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.animalGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    background-color: #6d8de6;
+}

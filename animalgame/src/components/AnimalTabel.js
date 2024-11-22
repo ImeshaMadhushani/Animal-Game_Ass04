@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import { animals } from '../AnimalsDb';
+import '../compo.css';
 function AnimalTable(props) {
     
     const [randomAnimal, setRandomAnimal] = useState(null)
@@ -27,23 +28,25 @@ function AnimalTable(props) {
         <div className='container'>
             <table className='gameTable'>
                 <thead>
-                    <th colSpan='3'>Animal Matching Game</th>
+                    <tr>
+                        <th colSpan='3'>Animal Matching Game</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th>Result</th>
-                        <th>Animal Name</th>
-                        <th>Select the Animal</th>
+                        <td>Result</td>
+                        <td>Animal Name</td>
+                        <td>Select the Animal</td>
                     </tr>
                     <tr>
                         <td className='result'>{result}</td>
-                        <td className='randomAnimal'>{randomAnimal.name.toUppercase()}</td>
+                        <td className='randomAnimal'>{randomAnimal ? randomAnimal.name.toUpperCase() : 'Loading...'}</td>
                         <td className='animalGrid'>
                             {animals.map((animal) =>(
-                            <div>
-                                    key={animal.name}
-                                    onClick={() => handleAnimalClick(animal.name)}
-                                    <img src={require(`./assets/${animal.image}`)} alt={animal.name} className='animalImage' />
+                                <div key={animal.name}
+                                    onClick={() => handleAnimalClick(animal.name)} className="animalItem">
+                                  
+                                    <img src={`/assets/${animal.img}`} alt={animal.name} className='animalImage' />
                             </div> 
                             ))}
                        </td>
@@ -55,4 +58,4 @@ function AnimalTable(props) {
 
 }
 
-export default AnimalTable
+export default AnimalTable;
