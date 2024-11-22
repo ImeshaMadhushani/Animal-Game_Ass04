@@ -1,5 +1,6 @@
-import AnimalTable from './components/AnimalTabel'
 import './App.css';
+import AnimalTable from './components/AnimalTabel'
+
 
 function App() {
   return (

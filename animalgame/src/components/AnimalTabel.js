@@ -23,7 +23,35 @@ function AnimalTable(props) {
         }
     }
 
-    
+    return (
+        <div className='container'>
+            <table className='gameTable'>
+                <thead>
+                    <th colSpan='3'>Animal Matching Game</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Result</th>
+                        <th>Animal Name</th>
+                        <th>Select the Animal</th>
+                    </tr>
+                    <tr>
+                        <td className='result'>{result}</td>
+                        <td className='randomAnimal'>{randomAnimal.name.toUppercase()}</td>
+                        <td className='animalGrid'>
+                            {animals.map((animal) =>(
+                            <div>
+                                    key={animal.name}
+                                    onClick={() => handleAnimalClick(animal.name)}
+                                    <img src={require(`./assets/${animal.image}`)} alt={animal.name} className='animalImage' />
+                            </div> 
+                            ))}
+                       </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    )
 
 }
 
