@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+# Animal Matching Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fun and interactive React-based game where players match animal names with their corresponding images. This simple yet engaging game helps players learn animal names while testing their memory and quick decision-making skills.
 
-## Available Scripts
+## 🎮 Game Features
 
-In the project directory, you can run:
+- Random animal name generation
+- Interactive image grid with animal pictures
+- Immediate feedback on correct/incorrect selections
+- Responsive design
+- Hover effects for better user interaction
 
-### `npm start`
+## 🚀 Technology Stack
+- React: For building the user interface.
+- JavaScript: Core logic for randomization and interactivity.
+- CSS: Styling for the application layout and visuals.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚦 Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository:
+```bash
+git clone [https://github.com/yourusername/animal-matching-game.git](https://github.com/ImeshaMadhushani/Animal-Game_Ass04.git)
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Navigate to the project directory:
+```bash
+cd animalgame
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies:
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Start the development server:
+```bash
+npm start
+```
 
-### `npm run eject`
+The game will be available at `http://localhost:3000`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📁 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+animalgame/
+├── src/
+│   ├── components/
+│   │   └── AnimalTable.js
+│   ├── AnimalsDb.js
+│   ├── compo.css
+│   ├── App.js
+│   └── App.css
+├── public/
+│   └── assets/
+│       └── [animal images]
+└── README.md
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎯 How to Play
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. The game displays a random animal name at the top
+2. Click on the corresponding animal image from the grid
+3. Get immediate feedback:
+   - "Won" for correct matches
+   - "Lost" for incorrect matches
+4. A new animal name is generated for each round
 
-## Learn More
+## 💻 Technical Details
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### AnimalTable
+- Main game component
+- Manages game state using React hooks
+- Handles user interactions and scoring
 
-### Code Splitting
+### State Management
+- `randomAnimal`: Stores the current target animal
+- `result`: Tracks game outcome (Won/Lost)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Styling
+- CSS modules for component-specific styling
+- Responsive grid layout for animal images
+- Interactive hover effects
+- Table-based game interface
 
-### Analyzing the Bundle Size
+## 🎨 Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Adding New Animals
 
-### Making a Progressive Web App
+1. Add new animal images to `/public/assets/`
+2. Update `AnimalsDb.js`:
+```javascript
+export const animals = [
+  {
+    name: "newAnimal",
+    img: "newAnimal.jpg"
+  },
+  // ... existing animals
+];
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Styling Modifications
+- Edit `compo.css` to customize:
+  - Table appearance
+  - Image grid layout
+  - Hover effects
+  - Color scheme
