@@ -113,3 +113,8 @@ export const animals = [
   - Image grid layout
   - Hover effects
   - Color scheme
+ 
+### Output![Screenshot 2024-11-22 133031](https://github.com/user-attachments/assets/acc2a446-4431-4679-a18e-74cc6a96525e)
+![Screenshot 2024-11-22 133051](https://github.com/user-attachments/assets/64460b9b-50d2-43e6-834d-f1c8c95513c9)
+
+
